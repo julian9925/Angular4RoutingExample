@@ -1,13 +1,13 @@
-import { Page2Component } from './page2/page2.component';
-import { Page1Component } from './page1/page1.component';
+import { CardComponent } from './card/card.component';
+import { DashboradComponent } from './dashborad/dashborad.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { fallbackRoute } from "./fallback-route";
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/page1', pathMatch: 'full'},
-  // { path: 'page1', component: Page1Component },
-  // { path: 'page2', component: Page2Component },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  { path: 'dashboard', component: DashboradComponent },
+  { path: 'cards', component: CardComponent },
   // fallbackRoute
 ];
 
