@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  page2: string = 'page2';
+  page2 = 'page2';
 }
