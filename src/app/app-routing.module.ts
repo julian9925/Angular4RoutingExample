@@ -5,13 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { fallbackRoute } from "./fallback-route";
 import { DashboradComponent } from './dashborad/dashborad.component';
 import { CardComponent } from './card/card.component';
+import { LoginGuard } from "./login.guard";
 
 const routes: Routes = [
   { path: '', component: LayoutComponent,
     children:[
       { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
       { path: 'dashboard', component: DashboradComponent },
-      { path: 'cards/:type', component: CardComponent },
+      { path: 'cards/:type', component: CardComponent, canActivate: [ LoginGuard ]},
       { path: 'charts', loadChildren: './charts/charts.module#ChartsModule'}
     ]
   },
