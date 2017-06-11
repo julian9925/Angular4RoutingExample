@@ -5,11 +5,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { fallbackRoute } from "./fallback-route";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/page1', pathMatch: 'full'},
-  // { path: '', component: Page1Component},
-  { path: 'page1', component: Page1Component },
-  { path: 'page2', component: Page2Component },
-  fallbackRoute
+  // { path: '', redirectTo: '/page1', pathMatch: 'full'},
+  // { path: 'page1', component: Page1Component },
+  // { path: 'page2', component: Page2Component },
+  // fallbackRoute
 ];
 
 @NgModule({
