@@ -2,13 +2,13 @@ import { CardComponent } from './card/card.component';
 import { DashboradComponent } from './dashborad/dashborad.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { fallbackRoute } from "./fallback-route";
+import { fallbackRoute } from './fallback-route';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   { path: 'dashboard', component: DashboradComponent },
-  { path: 'cards', component: CardComponent },
-  // fallbackRoute
+  { path: 'cards/:type', component: CardComponent },
+  fallbackRoute
 ];
 
 @NgModule({
