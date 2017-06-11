@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { initDashboard } from '../../shared/init-dashboard';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashborad',
@@ -8,10 +9,14 @@ import { initDashboard } from '../../shared/init-dashboard';
 })
 export class DashboradComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     $(initDashboard);
+  }
+
+  goCards(type) {
+    this.router.navigateByUrl('/cards/' + type);
   }
 
 }
