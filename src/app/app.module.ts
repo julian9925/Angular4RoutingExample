@@ -1,3 +1,4 @@
+import { ChartsRoutingModule } from './charts/charts-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +17,7 @@ import { FlotComponent } from './charts/flot/flot.component';
   ],
   imports: [
     BrowserModule,
+    ChartsRoutingModule,
     AppRoutingModule
   ],
   providers: [],

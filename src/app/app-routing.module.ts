@@ -9,10 +9,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   { path: 'dashboard', component: DashboradComponent },
   { path: 'cards/:type', component: CardComponent },
-  { path: 'charts', children: [
-      { path: 'flot', component: FlotComponent }
-    ]
-  },
   fallbackRoute
 ];
 
