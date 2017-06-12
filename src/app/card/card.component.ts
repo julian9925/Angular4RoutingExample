@@ -18,4 +18,8 @@ export class CardComponent implements OnInit {
     });
   }
 
+  countNumbers(num): void {
+    this.router.navigate(['/cards/', parseInt(this.type) + num ]);
+  }
+
 }
